@@ -1,0 +1,836 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    padding: 0;
+    margin: 0;
+    /* background-color: rgb(255, 255, 255); */
+}
+
+#logo {
+    height: 80px;
+
+    width: 320px;
+}
+
+.nav {
+    border-bottom: 1px solid #ffba24;
+    height: 80px;
+    display: flex;
+    padding: 0;
+    background-color: inherit;
+    z-index: 999999;
+    position: relative;
+
+}
+
+.tradingview-widget-copyright {
+    display: none !important;
+}
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    /* 100% Full-height */
+    width: 0;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #1232e4ed;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    padding-top: 60px;
+    /* Place content 60px from the top */
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 4px 4px 4px 12px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffba24;
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+
+.main-parent .form-wrap {
+    width: 450px;
+    background: rgb(255 255 255 / 75%);
+    border-radius: 10px;
+    padding: 35px 40px;
+    backdrop-filter: blur(5px);
+}
+
+.form-wrap form h1 {
+    font-family: 'Acme', sans-serif;
+    font-variant: small-caps;
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.form-wrap form h1 span {
+    font-variant: small-caps;
+    color: #f57224;
+}
+
+.form-wrap form .single-input input {
+    width: 100%;
+    padding: 14px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3521);
+    outline: none;
+    background: transparent;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-wrap form .submit-button {
+    text-align: center;
+}
+
+.form-wrap form .submit-button button.button {
+    padding: 13px 30px;
+    background-color: #f57224;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-wrap form .account-have {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.form-wrap form .account-have a {
+    color: rgb(34, 34, 34);
+    text-decoration: none;
+}
+
+#userName {
+    height: 40px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.btnOpen {
+    display: none;
+}
+
+.getstartedbtn {
+    height: 40px;
+    margin-top: 35px;
+    margin-left: 100px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+
+
+}
+.dropbtn{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+ border: none;
+ text-transform: capitalize;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: 900;
+ color: blue;
+ 
+ 
+
+    cursor: pointer;
+    background-color: white;
+}
+.dropbtn:hover{
+    border-top: 3px solid blue;
+    border-radius: 0;
+}
+.dropdown-content{
+    display: block;
+    line-height: 3;
+    color: blue;
+    padding: 5px;
+    text-transform: capitalize;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.523);
+    height: fit-content;
+    width: 300px;
+    z-index: 99;
+    margin-top: 3px;
+    background-color: blue;
+    /* text-align: center; */
+    display: none;
+}
+.dropdown-content a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+   border-left: 1px solid blue;
+    /* text-align: center; */
+    line-height: 4;
+    font-weight: bolder;
+    display: block;
+    font-style: italic;
+color: blue;
+    font-family: Arial, Helvetica, sans-serif;
+width: 100px;
+padding-left: 20px;
+}
+.dropdown:hover .dropdown-content{
+   background-color: white;
+ display: flex;
+ z-index: 1;
+ justify-content: space-around;
+}
+.dropdown{
+   /* margin-left: 150px; */
+    height: 50px;
+    background-color: inherit;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 100px;
+}
+.dropdown-content a:hover{
+    background-color: #f1f1f1;
+}
+
+/* the second dropdown */
+
+
+.dropbtn2{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+ border: none;
+ text-transform: capitalize;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: 900;
+ color: blue;
+ 
+ 
+
+    cursor: pointer;
+    background-color: white;
+}
+.dropdown-content2{
+    display: flex;
+    line-height: 3;
+    color: blue;
+    padding: 5px;
+    text-transform: capitalize;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.523);
+    height: fit-content;
+    z-index: 99;
+    width: 500px;
+    margin-top: 3px;
+    background-color: blue;
+    /* text-align: center; */
+    display: none;
+}
+.dropdown-content2 a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+   border-bottom: 1px solid blue;
+    /* text-align: center; */
+    font-weight: bolder;
+    display: block;
+    font-style: italic;
+color: blue;
+line-height: 4;
+    font-family: Arial, Helvetica, sans-serif;
+margin-left: 10px;
+}
+.dropdown2:hover .dropdown-content2{
+   background-color: white;
+   z-index: 1;
+ display: block;
+}
+.dropdown2{
+   /* margin-left: 150px; */
+    height: 50px;
+    background-color: inherit;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 100px;
+}
+.dropdown-content2 a:hover{
+    background-color: #f1f1f1;
+}
+
+.dropbtn2:hover{
+    border-top: 3px solid blue;
+    border-radius: 0;
+}
+
+/* the third dropdown */
+.dropdown3{
+  display: block;
+}
+
+.dropbtn3{
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+ border: none;
+ text-transform: capitalize;
+ font-family: 'Courier New', Courier, monospace;
+ font-weight: 900;
+ color: blue;
+ 
+ 
+
+    cursor: pointer;
+    background-color: white;
+}
+.dropdown-content3{
+    display: flex;
+    line-height: 3;
+    color: blue;
+    padding: 5px;
+    text-transform: capitalize;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px 2px rgba(128, 128, 128, 0.523);
+    height: fit-content;
+    width: 500px;
+    margin-top: 3px;
+    background-color: blue;
+    z-index: 99;
+    /* text-align: center; */
+    display: none;
+    margin-left: -250px;
+}
+.dropdown-content3 a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 15px;
+   border-bottom: 1px solid blue;
+    /* text-align: center; */
+    font-weight: bolder;
+    display: block;
+    font-style: italic;
+color: blue;
+line-height: 4;
+z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+margin-left: 10px;
+}
+.dropdown3:hover .dropdown-content3{
+   background-color: white;
+ display: block;
+ z-index: 1;
+}
+.dropdown3{
+   /* margin-left: 150px; */
+    height: 50px;
+    background-color: inherit;
+    margin-top: 30px;
+    margin-left: 100px;
+    width: 100px;
+}
+.dropdown-content3 a:hover{
+    background-color: #f1f1f1;
+}
+
+.dropbtn3:hover{
+    border-top: 3px solid blue;
+    border-radius: 0;
+}
+
+.home{
+    
+    margin-left: 40px;
+    margin-top: 27px;
+    width: 100px;
+    padding-top: 20px;
+    height: 30px;
+    text-decoration: none;
+    color: blue;
+    font-weight: 200;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-align: center;
+    align-items: center;
+    font-size: 15px;
+    border-top: 3px solid blue;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#avatar {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+}
+
+.avatarDiv {
+    display: flex;
+    border-bottom: 2px solid #f1f1f1;
+    flex-direction: row;
+    margin-top: -50px;
+}
+
+.avatarDiv p {
+
+    margin-top: 30px;
+    color: #ffba24;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.queryBox {
+    margin-top: 130%;
+    bottom: 0;
+    display: flex;
+
+}
+
+#button {
+    width: 30px;
+    border-radius: 10px;
+    border: 2px solid #ffba24;
+}
+.header1{
+    margin-top: 65px;
+    margin-left: 70px;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    font-weight: 900;
+    text-transform: capitalize;
+    
+}
+.header2{
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 2;
+    margin-top: 50px;
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: bolder;
+
+    margin-left: 70px;
+}
+.header1-img{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.header2-p{
+    font-weight: bold;
+    font-style: bold;
+    color: #ffba24;
+    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5;
+    margin-left: 70px;
+}
+.input-email{
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 5px;
+    border: 1px solid blue;
+margin-left: 70px;
+
+}
+.buttonz{
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+    padding: 20px;
+    border: 1px solid blue;
+margin-left: 30px;
+}
+.phone{
+    width: 250px;
+    height: 500px;
+    margin-top: -100px;
+    
+}
+.color{
+    /* background-color: red; */
+    background-image: url(img/kanchanara-fsSGgTBoX9Y-unsplash.jpg);
+    height: 350px;
+    background-position: right;
+    
+    border-radius:50% ;
+    width: 350px;
+}
+.right-side{
+    margin-top: 150px;
+}
+.hero{
+    display: flex;
+    justify-content: space-around;
+}
+.banner{
+    display: none;
+}
+
+.tradingview-widget-container{
+    margin-top: 100px;
+    width: 100% !important;
+}
+a.label__link-dzbd7lyV {
+    display: none;
+}
+
+.header-banner{
+    background-color: blue;
+    height: fit-content;
+    margin-top: 0px;
+ 
+}
+.header-banner-header{
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    color: #ffba24;
+
+}
+.float-right{
+    float: right;
+    margin-left: auto;
+}
+.buttonz2{
+    height: 55px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: #ffba24;
+    color: white;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: bold;
+    padding: 20px;
+    border: 1px solid blue;
+margin-left: 30px;
+}
+
+/* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+    background-color:blue;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: none;
+    justify-content: space-around;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .navbar a {
+    
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    justify-content: space-around;
+  }
+  
+  /* Change the color of links on hover */
+
+  
+  /* Add a color to the active/current link */
+  .navbar a.active {
+    background-color: gold;
+    color: white;
+  }
+  
+
+@media screen and (max-width: 1024px) {
+    .header-banner{
+        background-color: blue;
+        height: fit-content;
+        margin-top: 40px;
+    }
+
+    .hero{
+    display: block;
+}
+.tradingview-widget-copyright {
+    display: none !important;
+}
+.right-side{
+   display: none;
+}
+    .btnOpen {
+        display: flex;
+        text-align: right;
+        margin-left: 225px;
+        background-color: white;
+        color: blue;
+        height: fit-content;
+        font-size: 30px;
+        margin-top: 30px;
+        display: flex;
+       cursor: pointer;
+    }
+
+    .getstartedbtn {
+        display: none;
+    }
+.dropdown{
+    display: none;
+}
+.dropdown3{
+    display: none;
+}
+.dropdown2{
+    display: none;
+}
+.home{display: none;}
+
+
+.sidenav a {
+    font-size: 15px;
+    border-bottom: 2px solid white;
+    line-height: 2;
+    
+}
+.avatar{
+    height: 60px;
+    width: 60px;
+}
+.header1{
+    margin-top: 30px;
+    margin-left: 16px;
+    font-size: 25px;
+    font-family: 'Courier New', Courier, monospace;
+    color: blue;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+.banner{
+    display: flex;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.tradingview-widget-container{
+    margin-top: 250px;
+    width: 100% !important;
+}
+.navbar{
+    display: none;
+}
+}
+
+/* .dropdown-content {
+/* margin-top: -25px; */
+
+/* }  */
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+
+@media screen and (max-width: 600px) {
+    .nav {
+        width: 100%;
+        height: fit-content;
+        position:fixed;
+
+top: 0;
+        
+    }
+
+    .sidenav {
+        padding-top: 65px;
+    }
+
+    .sidenav a {
+        font-size: 15px;
+        border-bottom: 2px solid white;
+        line-height: 2;
+        
+    }
+    #logo {
+        width: 160px;
+        margin-top: -10px;
+    }
+
+    .getstartedbtn {
+        height: 40px;
+        margin-top: 15px;
+        margin-left: 20px;
+        width: 120px;
+        border-radius: 10px;
+        background-color: #ffba24;
+        display: block;
+
+    }
+
+    .btnOpen {
+        text-align: right;
+        margin-left: 25px;
+        background-color: white;
+        color: blue;
+        height: fit-content;
+        font-size: 30px;
+        margin-top: 17px;
+        cursor: pointer;
+        display: flex;
+    }
+
+    #avatar {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+    }
+
+    .avatarDiv {
+        display: flex;
+        border-bottom: 2px solid #f1f1f1;
+        flex-direction: row;
+        margin-top: -50px;
+    }
+
+    .avatarDiv p {
+
+        margin-top: 30px;
+        color: #ffba24;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 20px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .queryBox {
+        margin-top: 130%;
+        bottom: 0;
+        display: flex;
+
+    }
+
+    #button {
+        width: 30px;
+        border-radius: 10px;
+        border: 2px solid #ffba24;
+    }
+
+    .dropdown{
+        display: none;
+    }
+    .dropdown3{
+        display: none;
+    }
+    .dropdown2{
+        display: none;
+    }
+    .home{display: none;}
+
+    .header1{
+        text-transform: capitalize;
+        font-family: 'Courier New', Courier, monospace;
+        padding: 2px;
+        font-size: 15px;
+        margin-left: 15px;
+        margin-top: 100px;
+        font-weight: 900;
+        color: blue;
+    }
+    .hero{
+        display: block;
+    }
+    .left-side{
+       vertical-align: middle;
+       
+    }
+    .header2{
+        margin-left: 20px;
+    }
+    .header2-p{
+        margin-left: 20px;
+    }
+    .buttonz{
+        margin-left: 30px;
+        width: 300px;
+    }
+    .input-email{
+        width: 300px;
+        margin-left: 30px;
+    }
+    .phone{
+        width: 200px;
+        display: none;
+    }
+    .right-side{
+        background-color: red;
+display: none;
+    }
+    .banner{
+        width: 100%;
+        margin-top: 40px;
+        height: 300px;
+    }
+    .tradingview-widget-copyright {
+        display: none !important;
+    }
+   
+.tradingview-widget-container{
+    margin-top: 50px;
+    width: 100% !important;
+  
+}
+
+.navbar {
+    background-color: blue;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+    width: 100%;
+  }
+}
