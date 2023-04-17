@@ -13,6 +13,10 @@ module.exports = {
       'gray': '#8492a6',
       'gray-light': '#d3dce6',
     },
+    fontSize:{
+      '3xl':'35px',
+      '2xl':'25px',
+    },
 
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
