@@ -2,12 +2,86 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+html, body {
     padding: 0;
     margin: 0;
     /* background-color: rgb(255, 255, 255); */
+        height: 100vh;
+    width: 100%;
 }
+.dark-mode {
+    background-color: #232346ea;
+    color: white;
+.nav{
+    background: inherit;
+}
+.dropbtn{
+    background-color: inherit;
+}
+.dropbtn2{
+    background-color: inherit;
+}.dropbtn3{
+    background-color: inherit;
+}
+  }
+  .pp{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+  }
+  
+  #mode{
+    display: flex;
+  
+   margin-left: 70px;
+   padding-top: 12px;
+   padding-left: 12px;
+   border: 1px solid blue;
+   color: blue;
+   border-radius: 50%;
+   height: 50px;
+   width: 50px;
+   margin-top: 20px;
+  }
+.loader
+{
 
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffba24;
+    transition: opacity 15s, visibility 15s;
+    left: 0;
+    height: 100vh;
+    /* overflow: visible; */
+    /* background: #fff url('img/gif4.gif') no-repeat center center; */
+    z-index: 99999;
+}
+.loader-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+.loader::after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 10px solid blue;
+    border-top-color: #f1f1f1;
+    border-radius: 50%;
+    animation: loading 15s ease infinite;
+    
+}
+@keyframes loading{
+from{
+    transform: rotate(0turn);
+}
+to{
+    transform: rotate(1turn);
+}
+}
 #logo {
     height: 80px;
 
@@ -20,7 +94,7 @@
     display: flex;
     padding: 0;
     background-color: inherit;
-    z-index: 999999;
+    z-index: 0;
     position: relative;
 
 }
@@ -83,7 +157,8 @@
 
 .main-parent .form-wrap {
     width: 450px;
-    background: rgb(255 255 255 / 75%);
+    /* background: rgb(255 255 255 / 75%); */
+    background: inherit;
     border-radius: 10px;
     padding: 35px 40px;
     backdrop-filter: blur(5px);
@@ -95,11 +170,12 @@
     font-size: 45px;
     text-align: center;
     margin-bottom: 15px;
+    color: #ffba24
 }
 
 .form-wrap form h1 span {
     font-variant: small-caps;
-    color: #f57224;
+    color: blue;
 }
 
 .form-wrap form .single-input input {
@@ -493,6 +569,7 @@ margin-left: 30px;
     width: 250px;
     height: 500px;
     margin-top: -100px;
+    border-radius: 40px;
     
 }
 .color{
@@ -588,7 +665,8 @@ margin-left: 30px;
   }
   
   .divicon{
-    background-color: blue;
+    background-color: #fff;
+    box-shadow: 2px 2px grey;
 height: 70px;
 width: 70px;
 border-radius: 50%;
@@ -610,7 +688,7 @@ text-align: center;
 .main-papa{
     display: flex;
     justify-content: space-around;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .table-img{
     width: 44%;
@@ -628,10 +706,44 @@ text-align: center;
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2;
 }
+.client{
+    background-color: inherit;
+    margin-top: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
 
+}
+#floater{
+    top: 50vh;
+    position: fixed;
+    left: 10px;
+}
+
+iframe{
+    width: 700px;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+#iconfloater{
+    color: #ffba24;
+    font-size: 30px;
+    padding-top: 20px;
+    background-color: blue;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    
+}
 @media screen and (max-width: 1024px) {
+    iframe{
+        width: 600px;
+    }
     .main-papa{
         display: block;
+        margin-top: 70px;
     }
     .top-bottom{
         margin-left: 15%;
@@ -661,8 +773,8 @@ text-align: center;
         display: flex;
         text-align: right;
         margin-left: 225px;
-        background-color: white;
-        color: blue;
+        background-color: inherit;
+        color: #ffba24;
         height: fit-content;
         font-size: 30px;
         margin-top: 30px;
@@ -767,13 +879,14 @@ text-transform: capitalize;
 
     .btnOpen {
         text-align: right;
-        margin-left: 25px;
-        background-color: white;
-        color: blue;
+        margin-left: 15px;
+        background-color: inherit;
+        color: #ffba24;
         height: fit-content;
         font-size: 30px;
         margin-top: 17px;
         cursor: pointer;
+        margin-right: 10px;
         display: flex;
     }
 
@@ -904,4 +1017,24 @@ display: none;
   .papa{
     margin-left: 0;
   }
+  iframe{
+    width: 100%;
+  }
+ #mode{
+   margin: 0;
+   font-size: 10px;
+   width: 40px;
+   height: 40px;
+   margin-right: 5px;
+   padding-left: 5px;
+   margin-top: 15px;
+   padding-top: 7px;
+   color: inherit;
+   
+ } 
+ #floater{
+    top: 70vh;
+    position: fixed;
+    left: 10px;
+}
 }

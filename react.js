@@ -9,3 +9,4 @@
   <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
   <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
 </BottomNavigation>
+

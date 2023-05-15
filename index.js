@@ -1,3 +1,7 @@
+
+
+
+
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
@@ -92,5 +96,28 @@ submit_button.onclick = (e) => {
     }
     }
 
+
+}
+
+// import { createRoot } from 'react-dom/client';
+
+// function NavigationBar() {
+//   // TODO: Actually implement a navigation bar
+//   return <h1>Hello from React!</h1>;
+// }
+
+// const domNode = document.getElementById('navigation');
+// const root = createRoot(domNode);
+// root.render(<NavigationBar />);
+
+
+function myFunction() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
+
+
+function go(){
+  document.getElementById("goes").innerHTML = fname.value;
 
 }
